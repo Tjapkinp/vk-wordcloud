@@ -18,7 +18,7 @@ def vk_message_wordcloud(path2folder=None, mask=None, contour=None):
     # 1. Import masks:
     np_mask = None
 
-    if not mask:
+    if mask:
         d = path.dirname(__file__) if "__file__" in locals() else getcwd()
         if mask == "cloud":
             np_mask = np.array(Image.open(path.join(d, "./masks/cloud.png")))
@@ -29,6 +29,8 @@ def vk_message_wordcloud(path2folder=None, mask=None, contour=None):
             np_mask = np.array(Image.open(path.join(d, "./masks/butterfly.png")))
         if mask == "turd":
             np_mask = np.array(Image.open(path.join(d, "./masks/turd.png")))
+        if mask == "christmas_ball":
+            np_mask = np.array(Image.open(path.join(d, "./masks/christmas_ball.png")))
 
     if contour:
         contour_width = 10

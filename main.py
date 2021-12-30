@@ -2,4 +2,4 @@
 
 from vk_wordcloud import vk_message_wordcloud
 
-vk_message_wordcloud(mask="cloud")
+vk_message_wordcloud(mask="christmas_ball")
